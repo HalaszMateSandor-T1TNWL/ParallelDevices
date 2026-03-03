@@ -1,12 +1,7 @@
 #include <stdio.h>
 #include <CL/cl.h>
 
-int SAMPLE_SIZE = 200;
-
-typedef struct {
-    int x;
-    int y;
-}Vector2;
+int SAMPLE_SIZE = 1024;
 
 char* read_kernel_code(const char* filename)
 {
@@ -29,7 +24,7 @@ char* read_kernel_code(const char* filename)
 
 }
 
-int main(void)
+int main(int argc, char **argv)
 {
     float* A = (float*)malloc(SAMPLE_SIZE*sizeof(float));
     float* B = (float*)malloc(SAMPLE_SIZE*sizeof(float));
@@ -41,7 +36,6 @@ int main(void)
     }
 
     float* result = (float*)malloc(SAMPLE_SIZE*sizeof(float));
-
 
     const char* kernel_code = read_kernel_code("kernel.cl");
 
@@ -68,26 +62,20 @@ int main(void)
     cl_context context = clCreateContext(NULL, n_devices, &device_id, NULL, NULL, NULL);
     
     cl_program program = clCreateProgramWithSource(context, 1, &kernel_code, NULL, NULL);
-    err = clBuildProgram(program, 0, NULL, NULL, NULL, NULL);
+    err = clBuildProgram(program, 1, &device_id, NULL, NULL, NULL);
     if(err != CL_SUCCESS)
     {
         printf("[ERROR] There was an error building the program\n");
         return 0;
     }
 
-    cl_kernel kernel = clCreateKernel(program, "kernel", NULL);
+    cl_kernel kernel = clCreateKernel(program, "kernel_code", NULL);
 
-    int* host_buffer = (int*)malloc(SAMPLE_SIZE * sizeof(int));
-    for(int i = 0; i < SAMPLE_SIZE; i++)
-    {
-        host_buffer[i] = i;
-    }
+    cl_command_queue command_queue = clCreateCommandQueue(context, device_id, 0, NULL);
 
     cl_mem d_A = clCreateBuffer(context, CL_MEM_READ_ONLY, SAMPLE_SIZE*sizeof(int), NULL, NULL);
     cl_mem d_B = clCreateBuffer(context, CL_MEM_READ_ONLY, SAMPLE_SIZE*sizeof(int), NULL, NULL);
-    cl_mem d_result = clCreateBuffer(context, CL_MEM_READ_WRITE, SAMPLE_SIZE*sizeof(int), NULL, NULL);
-
-    cl_command_queue command_queue = clCreateCommandQueue(context, device_id, 0, NULL);
+    cl_mem d_result = clCreateBuffer(context, CL_MEM_WRITE_ONLY, SAMPLE_SIZE*sizeof(int), NULL, NULL);
 
     clEnqueueWriteBuffer(
         command_queue,
@@ -113,14 +101,17 @@ int main(void)
         NULL
     );
 
-    clSetKernelArg(kernel, 1, sizeof(cl_mem), (void*)&d_A);
-    clSetKernelArg(kernel, 2, sizeof(cl_mem), (void*)&d_B);
-    clSetKernelArg(kernel, 3, sizeof(cl_mem), (void*)&d_result);
-    clSetKernelArg(kernel, 4, sizeof(int), (void*)&SAMPLE_SIZE);
+    clSetKernelArg(kernel, 0, sizeof(cl_mem), (void*)&d_A);
+    clSetKernelArg(kernel, 1, sizeof(cl_mem), (void*)&d_B);
+    clSetKernelArg(kernel, 2, sizeof(cl_mem), (void*)&d_result);
 
-    size_t local_work_size = 256;
+    /*size_t local_work_size = 256;
     size_t n_work_groups = (SAMPLE_SIZE + local_work_size + 1) / local_work_size;
-    size_t global_work_size = local_work_size * n_work_groups;
+    size_t global_work_size = local_work_size * n_work_groups;*/
+
+    size_t global_work_size = SAMPLE_SIZE;
+    size_t local_work_size = 64;
+
 
     clEnqueueNDRangeKernel(
         command_queue,
@@ -139,8 +130,8 @@ int main(void)
         d_result,
         CL_TRUE,
         0,
-        SAMPLE_SIZE * sizeof(int),
-        host_buffer,
+        SAMPLE_SIZE * sizeof(float),
+        result,
         0,
         NULL,
         NULL
@@ -156,5 +147,7 @@ int main(void)
     clReleaseContext(context);
     clReleaseDevice(device_id);
 
-    free(host_buffer);
+    free(A);
+    free(B);
+    free(result);
 }
