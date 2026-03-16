@@ -105,12 +105,9 @@ int main(int argc, char **argv)
     clSetKernelArg(kernel, 1, sizeof(cl_mem), (void*)&d_B);
     clSetKernelArg(kernel, 2, sizeof(cl_mem), (void*)&d_result);
 
-    /*size_t local_work_size = 256;
+    size_t local_work_size = 256;
     size_t n_work_groups = (SAMPLE_SIZE + local_work_size + 1) / local_work_size;
-    size_t global_work_size = local_work_size * n_work_groups;*/
-
-    size_t global_work_size = SAMPLE_SIZE;
-    size_t local_work_size = 64;
+    size_t global_work_size = local_work_size * n_work_groups;
 
 
     clEnqueueNDRangeKernel(
@@ -150,4 +147,6 @@ int main(int argc, char **argv)
     free(A);
     free(B);
     free(result);
+
+    return 0;
 }
