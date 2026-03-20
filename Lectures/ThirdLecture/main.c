@@ -108,7 +108,7 @@ int main(int argc, char **argv)
     size_t n_work_groups = (SAMPLE_SIZE + local_work) / local_work;
     size_t global_work = local_work + n_work_groups;
 
-    printf("Local Work: %d, Number of work groups: %d, Global Work %d\n", local_work, n_work_groups, global_work);
+    printf("Local Work: %zu, Number of work groups: %zu, Global Work %zu\n", local_work, n_work_groups, global_work);
 
     err = clEnqueueNDRangeKernel(
         command_queue,
