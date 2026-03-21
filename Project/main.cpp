@@ -1,14 +1,19 @@
+#include <CL/cl.h>
 #include <CL/opencl.hpp>
 #include <iostream>
 #include <fstream>
 #include <CL/cl2.hpp>
 #include <opencv4/opencv2/core.hpp>
+#include <opencv4/opencv2/highgui.hpp>
 #include <opencv4/opencv2/imgcodecs.hpp>
 #include <opencv4/opencv2/imgproc.hpp>
+#include <string>
 
 using namespace std;
 using namespace cv;
 using namespace cl;
+
+int divisor(int number, int max);
 
 /* ========================================
  * ------------OpenCL Functions------------
@@ -50,15 +55,13 @@ int main(){
     Mat rgb[3];
     cv::split(image, rgb);
 
-
     Mat gray(image.rows, image.cols, CV_32F);
-    image.convertTo(image, CV_32F);
 
     size_t total_size = image.rows * image.cols * sizeof(float);
     Buffer redBuffer(context, CL_MEM_READ_ONLY, total_size);
     Buffer greenBuffer(context, CL_MEM_READ_ONLY, total_size);
     Buffer blueBuffer(context, CL_MEM_READ_ONLY, total_size);
-    Buffer grayBuffer(context, CL_MEM_READ_ONLY, total_size);
+    Buffer grayBuffer(context, CL_MEM_WRITE_ONLY, total_size);
 
     Kernel kernel(program, "rgb2gray");
     kernel.setArg(0, redBuffer);
@@ -89,15 +92,28 @@ int main(){
             rgb[0].ptr<float>()
     );
 
+    cout << "Image dimensions: " << image.rows << " x " << image.cols << endl;
+
+    int local_work = ((int)divisor(image.rows*image.cols, kernel.getWorkGroupInfo<CL_KERNEL_WORK_GROUP_SIZE>(device)));
+    cout << "Max work item sizes:\t" << device.getInfo<CL_DEVICE_MAX_WORK_ITEM_SIZES>()[0] << endl;
+    cout << "Max work group size:\t" << device.getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>() << endl;
+    cout << "Max individual work group size:\t" << kernel.getWorkGroupInfo<CL_KERNEL_WORK_GROUP_SIZE>(device) << endl;
+    cout << "Local work size chosen:\t" << local_work << endl;
+
     Event event;
-    queue.enqueueNDRangeKernel(
+    auto err = queue.enqueueNDRangeKernel(
         kernel,
         NullRange,
         NDRange((int)(image.rows*image.cols)),
-        NullRange,
+        NDRange(local_work),
         nullptr,
         &event
     );
+    if(err != CL_SUCCESS)
+    {
+        cout << "ERROR with enqueueNDRangeKernel\t" << err << endl;
+        exit(1);
+    }
 
     queue.enqueueReadBuffer(
         grayBuffer,
@@ -107,6 +123,21 @@ int main(){
         gray.ptr<float>()
     );
 
+    queue.finish();
+    queue.flush();
+
+    double time_taken = ((double)event.getProfilingInfo<CL_PROFILING_COMMAND_END>() - (double)(event.getProfilingInfo<CL_PROFILING_COMMAND_START>())) / 1000000.0;
+
+    image.convertTo(image, CV_8U);
+    imshow("Image RGB", image);
+
+    gray.convertTo(gray, CV_8U);
+    imshow("Image Gray", gray);
+
+    cout << "Time taken for operation:\t" << time_taken << endl;
+
+
+    waitKey(0);
 
     return 0;
 }
@@ -178,6 +209,9 @@ Mat readImage(const String filename){
 
     std::cout << "Reading image..." << std::endl;
     Mat image = imread(filename);
+
+    image.convertTo(image, CV_32F);
+
     if(image.empty())
     {
         std::cout << "Image: " << filename << " couldn't be loaded" << std::endl;
@@ -185,4 +219,17 @@ Mat readImage(const String filename){
     }
 
     return image;
+}
+
+int divisor(int number, int max)
+{
+    int i;
+    for(i = number / 2; i >= 1; i--)
+    {
+        if(number % i == 0 && i <= max)
+        {
+            break;
+        }
+    }
+    return i;
 }

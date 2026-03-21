@@ -317,20 +317,65 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o: /home/yagi/Programming/ParallelDevices/Proje
   /usr/local/include/opencv4/opencv2/core/utility.hpp \
   /usr/local/include/opencv4/opencv2/core/version.hpp \
   /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
+  /usr/local/include/opencv4/opencv2/highgui.hpp \
   /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
   /usr/local/include/opencv4/opencv2/imgproc.hpp \
   /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /usr/local/include/opencv4/opencv2/opencv_modules.hpp
+  /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+  /usr/local/include/opencv4/opencv2/videoio.hpp
 
-OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
+OpenCVCL: /lib/i386-linux-gnu/libX11.so.6 \
+  /lib/i386-linux-gnu/libXau.so.6 \
+  /lib/i386-linux-gnu/libXcomposite.so.1 \
+  /lib/i386-linux-gnu/libXcursor.so.1 \
+  /lib/i386-linux-gnu/libXdamage.so.1 \
+  /lib/i386-linux-gnu/libXdmcp.so.6 \
+  /lib/i386-linux-gnu/libXext.so.6 \
+  /lib/i386-linux-gnu/libXfixes.so.3 \
+  /lib/i386-linux-gnu/libXi.so.6 \
+  /lib/i386-linux-gnu/libXinerama.so.1 \
+  /lib/i386-linux-gnu/libXrandr.so.2 \
+  /lib/i386-linux-gnu/libXrender.so.1 \
+  /lib/i386-linux-gnu/libatk-1.0.so.0 \
+  /lib/i386-linux-gnu/libatomic.so.1 \
+  /lib/i386-linux-gnu/libblkid.so.1 \
+  /lib/i386-linux-gnu/libbrotlicommon.so.1 \
+  /lib/i386-linux-gnu/libbrotlidec.so.1 \
+  /lib/i386-linux-gnu/libbz2.so.1.0 \
+  /lib/i386-linux-gnu/libcairo.so.2 \
+  /lib/i386-linux-gnu/libdatrie.so.1 \
+  /lib/i386-linux-gnu/libdeflate.so.0 \
+  /lib/i386-linux-gnu/libexpat.so.1 \
+  /lib/i386-linux-gnu/libffi.so.8 \
+  /lib/i386-linux-gnu/libfontconfig.so.1 \
+  /lib/i386-linux-gnu/libfreetype.so.6 \
+  /lib/i386-linux-gnu/libfribidi.so.0 \
+  /lib/i386-linux-gnu/libgdk_pixbuf-2.0.so.0 \
+  /lib/i386-linux-gnu/libgio-2.0.so.0 \
+  /lib/i386-linux-gnu/libglib-2.0.so.0 \
+  /lib/i386-linux-gnu/libgmodule-2.0.so.0 \
+  /lib/i386-linux-gnu/libgobject-2.0.so.0 \
+  /lib/i386-linux-gnu/libgraphite2.so.3 \
+  /lib/i386-linux-gnu/libharfbuzz.so.0 \
   /lib/i386-linux-gnu/libjbig.so.0 \
   /lib/i386-linux-gnu/libjpeg.so.8 \
   /lib/i386-linux-gnu/liblzma.so.5 \
+  /lib/i386-linux-gnu/libmount.so.1 \
+  /lib/i386-linux-gnu/libpango-1.0.so.0 \
+  /lib/i386-linux-gnu/libpangocairo-1.0.so.0 \
+  /lib/i386-linux-gnu/libpangoft2-1.0.so.0 \
+  /lib/i386-linux-gnu/libpcre2-8.so.0 \
+  /lib/i386-linux-gnu/libpixman-1.so.0 \
   /lib/i386-linux-gnu/libpng16.so.16 \
+  /lib/i386-linux-gnu/libselinux.so.1 \
   /lib/i386-linux-gnu/libsharpyuv.so.0 \
+  /lib/i386-linux-gnu/libthai.so.0 \
   /lib/i386-linux-gnu/libtiff.so.6 \
   /lib/i386-linux-gnu/libwebp.so.7 \
   /lib/i386-linux-gnu/libwebpmux.so.3 \
+  /lib/i386-linux-gnu/libxcb-render.so.0 \
+  /lib/i386-linux-gnu/libxcb-shm.so.0 \
+  /lib/i386-linux-gnu/libxcb.so.1 \
   /lib/i386-linux-gnu/libz.so.1 \
   /lib/i386-linux-gnu/libzstd.so.1 \
   /lib/x86_64-linux-gnu/libIex-3_1.so.30 \
@@ -338,19 +383,64 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
   /lib/x86_64-linux-gnu/libImath-3_1.so.29 \
   /lib/x86_64-linux-gnu/libLerc.so.4 \
   /lib/x86_64-linux-gnu/libOpenEXR-3_1.so.30 \
+  /lib/x86_64-linux-gnu/libX11.so.6 \
+  /lib/x86_64-linux-gnu/libXau.so.6 \
+  /lib/x86_64-linux-gnu/libXcomposite.so.1 \
+  /lib/x86_64-linux-gnu/libXcursor.so.1 \
+  /lib/x86_64-linux-gnu/libXdamage.so.1 \
+  /lib/x86_64-linux-gnu/libXdmcp.so.6 \
+  /lib/x86_64-linux-gnu/libXext.so.6 \
+  /lib/x86_64-linux-gnu/libXfixes.so.3 \
+  /lib/x86_64-linux-gnu/libXi.so.6 \
+  /lib/x86_64-linux-gnu/libXinerama.so.1 \
+  /lib/x86_64-linux-gnu/libXrandr.so.2 \
+  /lib/x86_64-linux-gnu/libXrender.so.1 \
+  /lib/x86_64-linux-gnu/libatk-1.0.so.0 \
+  /lib/x86_64-linux-gnu/libatomic.so.1 \
+  /lib/x86_64-linux-gnu/libblkid.so.1 \
+  /lib/x86_64-linux-gnu/libbrotlicommon.so.1 \
+  /lib/x86_64-linux-gnu/libbrotlidec.so.1 \
+  /lib/x86_64-linux-gnu/libbz2.so.1.0 \
   /lib/x86_64-linux-gnu/libc.so.6 \
+  /lib/x86_64-linux-gnu/libcairo.so.2 \
+  /lib/x86_64-linux-gnu/libdatrie.so.1 \
   /lib/x86_64-linux-gnu/libdeflate.so.0 \
+  /lib/x86_64-linux-gnu/libexpat.so.1 \
+  /lib/x86_64-linux-gnu/libffi.so.8 \
+  /lib/x86_64-linux-gnu/libfontconfig.so.1 \
+  /lib/x86_64-linux-gnu/libfreetype.so.6 \
+  /lib/x86_64-linux-gnu/libfribidi.so.0 \
+  /lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libgio-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libglib-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libgmodule-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libgobject-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libgraphite2.so.3 \
+  /lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libharfbuzz.so.0 \
   /lib/x86_64-linux-gnu/libjbig.so.0 \
   /lib/x86_64-linux-gnu/libjpeg.so.8 \
   /lib/x86_64-linux-gnu/liblzma.so.5 \
   /lib/x86_64-linux-gnu/libm.so.6 \
+  /lib/x86_64-linux-gnu/libmount.so.1 \
   /lib/x86_64-linux-gnu/libmvec.so.1 \
+  /lib/x86_64-linux-gnu/libpango-1.0.so.0 \
+  /lib/x86_64-linux-gnu/libpangocairo-1.0.so.0 \
+  /lib/x86_64-linux-gnu/libpangoft2-1.0.so.0 \
+  /lib/x86_64-linux-gnu/libpcre2-8.so.0 \
+  /lib/x86_64-linux-gnu/libpixman-1.so.0 \
   /lib/x86_64-linux-gnu/libpng16.so.16 \
+  /lib/x86_64-linux-gnu/libselinux.so.1 \
   /lib/x86_64-linux-gnu/libsharpyuv.so.0 \
+  /lib/x86_64-linux-gnu/libthai.so.0 \
   /lib/x86_64-linux-gnu/libtiff.so.6 \
   /lib/x86_64-linux-gnu/libwebp.so.7 \
   /lib/x86_64-linux-gnu/libwebpdemux.so.2 \
   /lib/x86_64-linux-gnu/libwebpmux.so.3 \
+  /lib/x86_64-linux-gnu/libxcb-render.so.0 \
+  /lib/x86_64-linux-gnu/libxcb-shm.so.0 \
+  /lib/x86_64-linux-gnu/libxcb.so.1 \
   /lib/x86_64-linux-gnu/libz.so.1 \
   /lib/x86_64-linux-gnu/libzstd.so.1 \
   /lib64/ld-linux-x86-64.so.2 \
@@ -366,15 +456,58 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
   /usr/lib/gcc/x86_64-linux-gnu/15/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/libgcc_s.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
+  /usr/lib/i386-linux-gnu/libX11.so.6 \
+  /usr/lib/i386-linux-gnu/libXau.so.6 \
+  /usr/lib/i386-linux-gnu/libXcomposite.so.1 \
+  /usr/lib/i386-linux-gnu/libXcursor.so.1 \
+  /usr/lib/i386-linux-gnu/libXdamage.so.1 \
+  /usr/lib/i386-linux-gnu/libXdmcp.so.6 \
+  /usr/lib/i386-linux-gnu/libXext.so.6 \
+  /usr/lib/i386-linux-gnu/libXfixes.so.3 \
+  /usr/lib/i386-linux-gnu/libXi.so.6 \
+  /usr/lib/i386-linux-gnu/libXinerama.so.1 \
+  /usr/lib/i386-linux-gnu/libXrandr.so.2 \
+  /usr/lib/i386-linux-gnu/libXrender.so.1 \
+  /usr/lib/i386-linux-gnu/libatk-1.0.so.0 \
+  /usr/lib/i386-linux-gnu/libatomic.so.1 \
+  /usr/lib/i386-linux-gnu/libblkid.so.1 \
+  /usr/lib/i386-linux-gnu/libbrotlicommon.so.1 \
+  /usr/lib/i386-linux-gnu/libbrotlidec.so.1 \
+  /usr/lib/i386-linux-gnu/libbz2.so.1.0 \
+  /usr/lib/i386-linux-gnu/libcairo.so.2 \
+  /usr/lib/i386-linux-gnu/libdatrie.so.1 \
   /usr/lib/i386-linux-gnu/libdeflate.so.0 \
+  /usr/lib/i386-linux-gnu/libexpat.so.1 \
+  /usr/lib/i386-linux-gnu/libffi.so.8 \
+  /usr/lib/i386-linux-gnu/libfontconfig.so.1 \
+  /usr/lib/i386-linux-gnu/libfreetype.so.6 \
+  /usr/lib/i386-linux-gnu/libfribidi.so.0 \
+  /usr/lib/i386-linux-gnu/libgdk_pixbuf-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libgio-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libglib-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libgmodule-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libgobject-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libgraphite2.so.3 \
+  /usr/lib/i386-linux-gnu/libharfbuzz.so.0 \
   /usr/lib/i386-linux-gnu/libjbig.so.0 \
   /usr/lib/i386-linux-gnu/libjpeg.so.8 \
   /usr/lib/i386-linux-gnu/liblzma.so.5 \
+  /usr/lib/i386-linux-gnu/libmount.so.1 \
+  /usr/lib/i386-linux-gnu/libpango-1.0.so.0 \
+  /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0 \
+  /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0 \
+  /usr/lib/i386-linux-gnu/libpcre2-8.so.0 \
+  /usr/lib/i386-linux-gnu/libpixman-1.so.0 \
   /usr/lib/i386-linux-gnu/libpng16.so.16 \
+  /usr/lib/i386-linux-gnu/libselinux.so.1 \
   /usr/lib/i386-linux-gnu/libsharpyuv.so.0 \
+  /usr/lib/i386-linux-gnu/libthai.so.0 \
   /usr/lib/i386-linux-gnu/libtiff.so.6 \
   /usr/lib/i386-linux-gnu/libwebp.so.7 \
   /usr/lib/i386-linux-gnu/libwebpmux.so.3 \
+  /usr/lib/i386-linux-gnu/libxcb-render.so.0 \
+  /usr/lib/i386-linux-gnu/libxcb-shm.so.0 \
+  /usr/lib/i386-linux-gnu/libxcb.so.1 \
   /usr/lib/i386-linux-gnu/libz.so.1 \
   /usr/lib/i386-linux-gnu/libzstd.so.1 \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
@@ -398,8 +531,6 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/local/lib/libopencv_videoio.so.4.14.0:
 
-/usr/local/lib/libopencv_photo.so.4.14.0:
-
 /usr/local/lib/libopencv_ml.so.4.14.0:
 
 /usr/local/lib/libopencv_imgproc.so.4.14.0:
@@ -418,9 +549,43 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/lib/i386-linux-gnu/libwebpmux.so.3:
 
+/usr/lib/i386-linux-gnu/libthai.so.0:
+
+/usr/lib/i386-linux-gnu/libselinux.so.1:
+
 /usr/lib/i386-linux-gnu/libpng16.so.16:
 
+/usr/lib/i386-linux-gnu/libmount.so.1:
+
+/usr/lib/i386-linux-gnu/libharfbuzz.so.0:
+
+/usr/lib/i386-linux-gnu/libgmodule-2.0.so.0:
+
+/usr/lib/i386-linux-gnu/libglib-2.0.so.0:
+
+/usr/lib/i386-linux-gnu/libgio-2.0.so.0:
+
+/usr/lib/i386-linux-gnu/libgdk_pixbuf-2.0.so.0:
+
+/usr/lib/i386-linux-gnu/libfribidi.so.0:
+
+/usr/lib/i386-linux-gnu/libexpat.so.1:
+
 /usr/lib/i386-linux-gnu/liblzma.so.5:
+
+/usr/lib/i386-linux-gnu/libgobject-2.0.so.0:
+
+/usr/lib/i386-linux-gnu/libdatrie.so.1:
+
+/usr/lib/i386-linux-gnu/libblkid.so.1:
+
+/usr/lib/i386-linux-gnu/libatomic.so.1:
+
+/usr/lib/i386-linux-gnu/libXrender.so.1:
+
+/usr/lib/i386-linux-gnu/libXi.so.6:
+
+/usr/lib/i386-linux-gnu/libXcursor.so.1:
 
 /usr/lib/x86_64-linux-gnu/libgcc_s.so.1:
 
@@ -440,7 +605,13 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /lib64/ld-linux-x86-64.so.2:
 
+/usr/lib/i386-linux-gnu/libatk-1.0.so.0:
+
 /lib/x86_64-linux-gnu/libzstd.so.1:
+
+/lib/x86_64-linux-gnu/libxcb.so.1:
+
+/lib/x86_64-linux-gnu/libxcb-render.so.0:
 
 /lib/x86_64-linux-gnu/libwebpdemux.so.2:
 
@@ -448,15 +619,71 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /lib/x86_64-linux-gnu/libsharpyuv.so.0:
 
+/lib/x86_64-linux-gnu/libselinux.so.1:
+
+/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0:
+
+/lib/x86_64-linux-gnu/libpango-1.0.so.0:
+
+/lib/x86_64-linux-gnu/libmount.so.1:
+
 /lib/x86_64-linux-gnu/liblzma.so.5:
 
-/lib/x86_64-linux-gnu/libjpeg.so.8:
+/lib/x86_64-linux-gnu/libharfbuzz.so.0:
+
+/lib/x86_64-linux-gnu/libglib-2.0.so.0:
+
+/lib/x86_64-linux-gnu/libgio-2.0.so.0:
+
+/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0:
+
+/lib/x86_64-linux-gnu/libfreetype.so.6:
+
+/lib/x86_64-linux-gnu/libdatrie.so.1:
+
+/lib/x86_64-linux-gnu/libcairo.so.2:
+
+/usr/lib/i386-linux-gnu/libxcb-shm.so.0:
+
+/usr/lib/i386-linux-gnu/libXau.so.6:
+
+/lib/x86_64-linux-gnu/libbrotlicommon.so.1:
+
+/usr/lib/i386-linux-gnu/libfreetype.so.6:
+
+/lib/x86_64-linux-gnu/libatomic.so.1:
+
+/usr/local/lib/libopencv_photo.so.4.14.0:
+
+/lib/x86_64-linux-gnu/libXrender.so.1:
+
+/lib/x86_64-linux-gnu/libXi.so.6:
+
+/lib/x86_64-linux-gnu/libXfixes.so.3:
+
+/lib/x86_64-linux-gnu/libXdmcp.so.6:
+
+/lib/x86_64-linux-gnu/libXinerama.so.1:
+
+/lib/x86_64-linux-gnu/libXdamage.so.1:
+
+/usr/lib/i386-linux-gnu/libbz2.so.1.0:
+
+/lib/x86_64-linux-gnu/libXcursor.so.1:
+
+/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0:
+
+/lib/x86_64-linux-gnu/libX11.so.6:
 
 /lib/x86_64-linux-gnu/libLerc.so.4:
 
 /lib/i386-linux-gnu/libzstd.so.1:
 
-/lib/i386-linux-gnu/libz.so.1:
+/lib/i386-linux-gnu/libxcb.so.1:
+
+/lib/x86_64-linux-gnu/libjpeg.so.8:
+
+/lib/i386-linux-gnu/libxcb-shm.so.0:
 
 /lib/i386-linux-gnu/libwebp.so.7:
 
@@ -464,15 +691,65 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /lib/i386-linux-gnu/libsharpyuv.so.0:
 
+/usr/lib/i386-linux-gnu/libbrotlidec.so.1:
+
+/lib/i386-linux-gnu/libpango-1.0.so.0:
+
+/lib/i386-linux-gnu/libmount.so.1:
+
 /lib/i386-linux-gnu/liblzma.so.5:
 
 /lib/i386-linux-gnu/libjpeg.so.8:
+
+/lib/i386-linux-gnu/libfribidi.so.0:
+
+/lib/i386-linux-gnu/libz.so.1:
+
+/lib/i386-linux-gnu/libfontconfig.so.1:
+
+/lib/i386-linux-gnu/libffi.so.8:
+
+/lib/i386-linux-gnu/libdatrie.so.1:
+
+/lib/i386-linux-gnu/libcairo.so.2:
+
+/lib/i386-linux-gnu/libbz2.so.1.0:
+
+/lib/i386-linux-gnu/libblkid.so.1:
+
+/lib/x86_64-linux-gnu/libbz2.so.1.0:
+
+/lib/i386-linux-gnu/libatomic.so.1:
+
+/usr/lib/i386-linux-gnu/libxcb.so.1:
+
+/lib/i386-linux-gnu/libatk-1.0.so.0:
+
+/lib/i386-linux-gnu/libXinerama.so.1:
+
+/lib/i386-linux-gnu/libXfixes.so.3:
+
+/lib/i386-linux-gnu/libXdmcp.so.6:
+
+/lib/i386-linux-gnu/libbrotlicommon.so.1:
+
+/lib/i386-linux-gnu/libXdamage.so.1:
+
+/usr/lib/i386-linux-gnu/libXdamage.so.1:
+
+/lib/i386-linux-gnu/libXau.so.6:
+
+/usr/local/include/opencv4/opencv2/videoio.hpp:
 
 /usr/local/include/opencv4/opencv2/opencv_modules.hpp:
 
 /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp:
 
 /usr/local/include/opencv4/opencv2/imgcodecs.hpp:
+
+/lib/x86_64-linux-gnu/libgraphite2.so.3:
+
+/lib/x86_64-linux-gnu/libfribidi.so.0:
 
 /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp:
 
@@ -482,7 +759,11 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/local/include/opencv4/opencv2/core/traits.hpp:
 
+/lib/i386-linux-gnu/libgraphite2.so.3:
+
 /usr/local/include/opencv4/opencv2/core/persistence.hpp:
+
+/usr/lib/i386-linux-gnu/libXrandr.so.2:
 
 /usr/local/include/opencv4/opencv2/core/ovx.hpp:
 
@@ -508,11 +789,17 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/lib/gcc/x86_64-linux-gnu/15/include/xmmintrin.h:
 
+/usr/lib/i386-linux-gnu/libXdmcp.so.6:
+
 /usr/lib/gcc/x86_64-linux-gnu/15/include/syslimits.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/include/mmintrin.h:
 
+/usr/lib/i386-linux-gnu/libffi.so.8:
+
 /usr/lib/gcc/x86_64-linux-gnu/15/include/mm_malloc.h:
+
+/lib/x86_64-linux-gnu/libXau.so.6:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/include/limits.h:
 
@@ -528,6 +815,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
+/lib/x86_64-linux-gnu/libgobject-2.0.so.0:
+
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /lib/x86_64-linux-gnu/libIex-3_1.so.30:
@@ -540,6 +829,10 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /lib/i386-linux-gnu/libwebpmux.so.3:
 
+/lib/i386-linux-gnu/libgio-2.0.so.0:
+
+/lib/i386-linux-gnu/libXi.so.6:
+
 /usr/local/include/opencv4/opencv2/core/fast_math.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
@@ -548,13 +841,19 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/error_constants.h:
 
+/lib/x86_64-linux-gnu/libbrotlidec.so.1:
+
 /usr/include/x86_64-linux-gnu/c++/15/bits/ctype_base.h:
+
+/lib/i386-linux-gnu/libthai.so.0:
 
 /usr/local/include/opencv4/opencv2/core.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/c++locale.h:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/c++io.h:
+
+/usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h:
 
@@ -574,13 +873,19 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
+/lib/x86_64-linux-gnu/libpcre2-8.so.0:
+
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/lib/i386-linux-gnu/libXcomposite.so.1:
 
 /usr/include/c++/15/ext/atomicity.h:
 
 /usr/include/limits.h:
 
 /usr/include/c++/15/ext/alloc_traits.h:
+
+/lib/x86_64-linux-gnu/libthai.so.0:
 
 /usr/include/linux/types.h:
 
@@ -591,6 +896,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 /usr/include/c++/15/bits/stl_function.h:
 
 /usr/include/string.h:
+
+/usr/lib/i386-linux-gnu/libX11.so.6:
 
 /usr/include/c++/15/cstdlib:
 
@@ -606,6 +913,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
+/lib/x86_64-linux-gnu/libblkid.so.1:
+
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/15/cstdint:
@@ -620,11 +929,15 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/c++/15/clocale:
 
+/usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0:
+
 /usr/include/c++/15/climits:
 
 /usr/include/c++/15/cctype:
 
 /lib/x86_64-linux-gnu/libtiff.so.6:
+
+/lib/i386-linux-gnu/libXrender.so.1:
 
 /usr/include/c++/15/cerrno:
 
@@ -638,9 +951,15 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/features-time64.h:
 
+/lib/x86_64-linux-gnu/libxcb-shm.so.0:
+
+/usr/local/include/opencv4/opencv2/highgui.hpp:
+
 /usr/include/c++/15/bits/streambuf_iterator.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/lib/i386-linux-gnu/libharfbuzz.so.0:
 
 /usr/local/include/opencv4/opencv2/core/cvdef.h:
 
@@ -648,7 +967,11 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/c++/15/bits/stl_tempbuf.h:
 
+/lib/i386-linux-gnu/libpcre2-8.so.0:
+
 /usr/include/c++/15/bits/stl_raw_storage_iter.h:
+
+/lib/i386-linux-gnu/libxcb-render.so.0:
 
 /usr/include/c++/15/bits/std_mutex.h:
 
@@ -660,6 +983,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/c++/15/bits/shared_ptr_base.h:
 
+/usr/lib/i386-linux-gnu/libpcre2-8.so.0:
+
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
 
 /usr/include/c++/15/bits/range_access.h:
@@ -667,6 +992,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/c++/15/cfloat:
+
+/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0:
 
 /usr/include/c++/15/debug/debug.h:
 
@@ -677,6 +1004,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 /usr/include/c++/15/bits/postypes.h:
 
 /usr/include/c++/15/bits/parse_numbers.h:
+
+/lib/x86_64-linux-gnu/libgmodule-2.0.so.0:
 
 /usr/include/c++/15/bits/unique_lock.h:
 
@@ -701,6 +1030,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 /usr/include/c++/15/bits/shared_ptr.h:
 
 /usr/include/c++/15/bits/stringfwd.h:
+
+/lib/i386-linux-gnu/libXext.so.6:
 
 /usr/include/c++/15/bits/chrono.h:
 
@@ -740,6 +1071,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/lib/gcc/x86_64-linux-gnu/15/libgcc.a:
 
+/lib/i386-linux-gnu/libgdk_pixbuf-2.0.so.0:
+
 /usr/include/c++/15/array:
 
 /usr/local/lib/libopencv_video.so.4.14.0:
@@ -750,6 +1083,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /lib/x86_64-linux-gnu/libjbig.so.0:
 
+/lib/x86_64-linux-gnu/libXrandr.so.2:
+
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/15/initializer_list:
@@ -758,6 +1093,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/c++/15/bits/refwrap.h:
 
+/usr/lib/i386-linux-gnu/libcairo.so.2:
+
 /usr/include/c++/15/type_traits:
 
 /usr/include/CL/cl_gl.h:
@@ -765,6 +1102,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 /usr/include/x86_64-linux-gnu/c++/15/bits/ctype_inline.h:
 
 /usr/include/c++/15/bits/move.h:
+
+/lib/i386-linux-gnu/libexpat.so.1:
 
 /usr/include/c++/15/bits/std_function.h:
 
@@ -777,6 +1116,10 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/15/bits/std_abs.h:
+
+/usr/lib/i386-linux-gnu/libpango-1.0.so.0:
+
+/lib/i386-linux-gnu/libpangoft2-1.0.so.0:
 
 /usr/include/c++/15/typeinfo:
 
@@ -793,6 +1136,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 /usr/include/stdc-predef.h:
 
 /usr/include/CL/cl2.hpp:
+
+/lib/i386-linux-gnu/libglib-2.0.so.0:
 
 /usr/include/c++/15/bits/exception_defines.h:
 
@@ -818,6 +1163,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
+/usr/lib/i386-linux-gnu/libXfixes.so.3:
+
 /usr/include/c++/15/bits/stl_iterator.h:
 
 /lib/x86_64-linux-gnu/libc.so.6:
@@ -827,6 +1174,8 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 /usr/include/c++/15/memory:
 
 /usr/include/c++/15/vector:
+
+/usr/lib/i386-linux-gnu/libgraphite2.so.3:
 
 /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp:
 
@@ -854,17 +1203,23 @@ OpenCVCL: /lib/i386-linux-gnu/libdeflate.so.0 \
 
 /usr/include/c++/15/bits/new_allocator.h:
 
+/lib/x86_64-linux-gnu/libatk-1.0.so.0:
+
 /usr/include/c++/15/bits/uses_allocator.h:
 
 CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/include/c++/15/bits/version.h:
 
+/usr/lib/i386-linux-gnu/libfontconfig.so.1:
+
 /usr/include/c++/15/bits/concept_check.h:
 
 /usr/include/linux/limits.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0:
 
 /usr/include/c++/15/cmath:
 
@@ -896,7 +1251,11 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/include/c++/15/backward/binders.h:
 
+/lib/x86_64-linux-gnu/libffi.so.8:
+
 /usr/include/c++/15/utility:
+
+/lib/i386-linux-gnu/libgmodule-2.0.so.0:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h:
 
@@ -909,6 +1268,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/c++/15/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/lib/i386-linux-gnu/libpixman-1.so.0:
 
 /usr/include/c++/15/bits/allocated_ptr.h:
 
@@ -934,6 +1295,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/include/ctype.h:
 
+/lib/i386-linux-gnu/libXcursor.so.1:
+
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/c++/15/bits/allocator.h:
@@ -945,6 +1308,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/pthread.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h:
+
+/lib/i386-linux-gnu/libselinux.so.1:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
@@ -978,7 +1343,11 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/include/c++/15/ext/numeric_traits.h:
 
+/usr/lib/i386-linux-gnu/libxcb-render.so.0:
+
 /usr/include/c++/15/ext/string_conversions.h:
+
+/usr/lib/i386-linux-gnu/libXcomposite.so.1:
 
 /usr/include/c++/15/ios:
 
@@ -998,13 +1367,21 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
+/lib/i386-linux-gnu/libX11.so.6:
+
 /usr/include/c++/15/iterator:
 
 /usr/include/linux/errno.h:
 
 /usr/include/c++/15/new:
 
+/lib/i386-linux-gnu/libbrotlidec.so.1:
+
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/lib/x86_64-linux-gnu/libpixman-1.so.0:
+
+/lib/x86_64-linux-gnu/libfontconfig.so.1:
 
 /usr/include/wchar.h:
 
@@ -1020,6 +1397,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/include/c++/15/string:
 
+/usr/lib/i386-linux-gnu/libpixman-1.so.0:
+
 /lib/x86_64-linux-gnu/libImath-3_1.so.29:
 
 /usr/include/c++/15/system_error:
@@ -1029,6 +1408,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/errno.h:
 
 /usr/local/lib/libopencv_core.so.4.14.0:
+
+/lib/x86_64-linux-gnu/libexpat.so.1:
 
 /usr/include/features.h:
 
@@ -1045,6 +1426,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/math.h:
+
+/lib/i386-linux-gnu/libpangocairo-1.0.so.0:
 
 /usr/include/wctype.h:
 
@@ -1064,6 +1447,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/include/strings.h:
 
+/lib/i386-linux-gnu/libXrandr.so.2:
+
 /usr/include/c++/15/bits/stl_iterator_base_funcs.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
@@ -1074,6 +1459,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
+/usr/lib/i386-linux-gnu/libbrotlicommon.so.1:
+
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
@@ -1083,6 +1470,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/lib/x86_64-linux-gnu/libXcomposite.so.1:
 
 /usr/include/c++/15/bits/basic_ios.h:
 
@@ -1095,6 +1484,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/lib/i386-linux-gnu/libfreetype.so.6:
 
 /usr/include/c++/15/bits/stl_vector.h:
 
@@ -1110,17 +1501,23 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /lib/x86_64-linux-gnu/libwebpmux.so.3:
 
+/lib/i386-linux-gnu/libgobject-2.0.so.0:
+
 /usr/include/c++/15/cstring:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
+/usr/lib/i386-linux-gnu/libXinerama.so.1:
+
 /lib/i386-linux-gnu/libjbig.so.0:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
+
+/lib/x86_64-linux-gnu/libXext.so.6:
 
 /usr/include/time.h:
 
@@ -1131,6 +1528,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/usr/lib/i386-linux-gnu/libXext.so.6:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/basic_file.h:
 
