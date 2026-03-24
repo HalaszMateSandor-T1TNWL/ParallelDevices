@@ -2,7 +2,7 @@ OpenCVCL: \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o \
-  CMakeFiles/OpenCVCL.dir/main.cpp.o \
+  CMakeFiles/OpenCVCL.dir/proof.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libOpenCL.so \
   /usr/local/lib/libopencv_gapi.so.4.14.0 \
   /usr/local/lib/libopencv_highgui.so.4.14.0 \
@@ -45,7 +45,6 @@ OpenCVCL: \
   /usr/lib/gcc/x86_64-linux-gnu/15/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o \
-  /lib64/ld-linux-x86-64.so.2 \
   /usr/local/lib/libopencv_imgproc.so.4.14.0 \
   /lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0 \
   /lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0 \
@@ -82,6 +81,7 @@ OpenCVCL: \
   /lib/x86_64-linux-gnu/libtiff.so.6 \
   /lib/x86_64-linux-gnu/libOpenEXR-3_1.so.30 \
   /lib/x86_64-linux-gnu/libm.so.6 \
+  /lib64/ld-linux-x86-64.so.2 \
   /lib/i386-linux-gnu/libgmodule-2.0.so.0 \
   /usr/lib/i386-linux-gnu/libgmodule-2.0.so.0 \
   /lib/x86_64-linux-gnu/libgmodule-2.0.so.0 \
@@ -225,7 +225,7 @@ OpenCVCL: \
 
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
 
-CMakeFiles/OpenCVCL.dir/main.cpp.o:
+CMakeFiles/OpenCVCL.dir/proof.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libOpenCL.so:
 
@@ -311,8 +311,6 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o:
 
-/lib64/ld-linux-x86-64.so.2:
-
 /usr/local/lib/libopencv_imgproc.so.4.14.0:
 
 /lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0:
@@ -384,6 +382,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /lib/x86_64-linux-gnu/libOpenEXR-3_1.so.30:
 
 /lib/x86_64-linux-gnu/libm.so.6:
+
+/lib64/ld-linux-x86-64.so.2:
 
 /lib/i386-linux-gnu/libgmodule-2.0.so.0:
 

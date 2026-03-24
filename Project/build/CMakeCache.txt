@@ -232,6 +232,15 @@ OpenCVCL_SOURCE_DIR:STATIC=/home/yagi/Programming/ParallelDevices/Project
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
 
+//Value Computed by CMake
+Proof_BINARY_DIR:STATIC=/home/yagi/Programming/ParallelDevices/Project/build
+
+//Value Computed by CMake
+Proof_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Proof_SOURCE_DIR:STATIC=/home/yagi/Programming/ParallelDevices/Project
+
 
 ########################
 # INTERNAL cache entries

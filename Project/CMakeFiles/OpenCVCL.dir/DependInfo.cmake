@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/yagi/Programming/ParallelDevices/Project/main.cpp" "CMakeFiles/OpenCVCL.dir/main.cpp.o" "gcc" "CMakeFiles/OpenCVCL.dir/main.cpp.o.d"
+  "/home/yagi/Programming/ParallelDevices/Project/proof.cpp" "CMakeFiles/OpenCVCL.dir/proof.cpp.o" "gcc" "CMakeFiles/OpenCVCL.dir/proof.cpp.o.d"
   "" "OpenCVCL" "gcc" "CMakeFiles/OpenCVCL.dir/link.d"
   )
 

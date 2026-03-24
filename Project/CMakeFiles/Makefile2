@@ -85,12 +85,12 @@ clean: CMakeFiles/OpenCVCL.dir/clean
 CMakeFiles/OpenCVCL.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yagi/Programming/ParallelDevices/Project/CMakeFiles --progress-num=1,2 "Built target OpenCVCL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yagi/Programming/ParallelDevices/Project/CMakeFiles --progress-num=1,2,3 "Built target OpenCVCL"
 .PHONY : CMakeFiles/OpenCVCL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OpenCVCL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yagi/Programming/ParallelDevices/Project/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yagi/Programming/ParallelDevices/Project/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenCVCL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yagi/Programming/ParallelDevices/Project/CMakeFiles 0
 .PHONY : CMakeFiles/OpenCVCL.dir/rule
@@ -102,7 +102,7 @@ OpenCVCL: CMakeFiles/OpenCVCL.dir/rule
 # codegen rule for target.
 CMakeFiles/OpenCVCL.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yagi/Programming/ParallelDevices/Project/CMakeFiles --progress-num=1,2 "Finished codegen for target OpenCVCL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yagi/Programming/ParallelDevices/Project/CMakeFiles --progress-num=1,2,3 "Finished codegen for target OpenCVCL"
 .PHONY : CMakeFiles/OpenCVCL.dir/codegen
 
 # clean rule for target.

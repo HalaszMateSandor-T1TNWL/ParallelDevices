@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+proof.o: proof.cpp.o
+.PHONY : proof.o
+
+# target to build an object file
+proof.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/proof.cpp.o
+.PHONY : proof.cpp.o
+
+proof.i: proof.cpp.i
+.PHONY : proof.i
+
+# target to preprocess a source file
+proof.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/proof.cpp.i
+.PHONY : proof.cpp.i
+
+proof.s: proof.cpp.s
+.PHONY : proof.s
+
+# target to generate assembly for a file
+proof.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/proof.cpp.s
+.PHONY : proof.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... proof.o"
+	@echo "... proof.i"
+	@echo "... proof.s"
 .PHONY : help
 
 

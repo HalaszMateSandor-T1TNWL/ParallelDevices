@@ -72,28 +72,28 @@ include CMakeFiles/OpenCVCL.dir/flags.make
 CMakeFiles/OpenCVCL.dir/codegen:
 .PHONY : CMakeFiles/OpenCVCL.dir/codegen
 
-CMakeFiles/OpenCVCL.dir/main.cpp.o: CMakeFiles/OpenCVCL.dir/flags.make
-CMakeFiles/OpenCVCL.dir/main.cpp.o: /home/yagi/Programming/ParallelDevices/Project/main.cpp
-CMakeFiles/OpenCVCL.dir/main.cpp.o: CMakeFiles/OpenCVCL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yagi/Programming/ParallelDevices/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenCVCL.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenCVCL.dir/main.cpp.o -MF CMakeFiles/OpenCVCL.dir/main.cpp.o.d -o CMakeFiles/OpenCVCL.dir/main.cpp.o -c /home/yagi/Programming/ParallelDevices/Project/main.cpp
+CMakeFiles/OpenCVCL.dir/proof.cpp.o: CMakeFiles/OpenCVCL.dir/flags.make
+CMakeFiles/OpenCVCL.dir/proof.cpp.o: /home/yagi/Programming/ParallelDevices/Project/proof.cpp
+CMakeFiles/OpenCVCL.dir/proof.cpp.o: CMakeFiles/OpenCVCL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yagi/Programming/ParallelDevices/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenCVCL.dir/proof.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenCVCL.dir/proof.cpp.o -MF CMakeFiles/OpenCVCL.dir/proof.cpp.o.d -o CMakeFiles/OpenCVCL.dir/proof.cpp.o -c /home/yagi/Programming/ParallelDevices/Project/proof.cpp
 
-CMakeFiles/OpenCVCL.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenCVCL.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yagi/Programming/ParallelDevices/Project/main.cpp > CMakeFiles/OpenCVCL.dir/main.cpp.i
+CMakeFiles/OpenCVCL.dir/proof.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenCVCL.dir/proof.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yagi/Programming/ParallelDevices/Project/proof.cpp > CMakeFiles/OpenCVCL.dir/proof.cpp.i
 
-CMakeFiles/OpenCVCL.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenCVCL.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yagi/Programming/ParallelDevices/Project/main.cpp -o CMakeFiles/OpenCVCL.dir/main.cpp.s
+CMakeFiles/OpenCVCL.dir/proof.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenCVCL.dir/proof.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yagi/Programming/ParallelDevices/Project/proof.cpp -o CMakeFiles/OpenCVCL.dir/proof.cpp.s
 
 # Object files for target OpenCVCL
 OpenCVCL_OBJECTS = \
-"CMakeFiles/OpenCVCL.dir/main.cpp.o"
+"CMakeFiles/OpenCVCL.dir/proof.cpp.o"
 
 # External object files for target OpenCVCL
 OpenCVCL_EXTERNAL_OBJECTS =
 
-OpenCVCL: CMakeFiles/OpenCVCL.dir/main.cpp.o
+OpenCVCL: CMakeFiles/OpenCVCL.dir/proof.cpp.o
 OpenCVCL: CMakeFiles/OpenCVCL.dir/build.make
 OpenCVCL: CMakeFiles/OpenCVCL.dir/compiler_depend.ts
 OpenCVCL: /usr/local/lib/libopencv_gapi.so.4.14.0
