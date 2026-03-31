@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/OpenCVCL.dir/link.d"
-  "CMakeFiles/OpenCVCL.dir/proof.cpp.o"
-  "CMakeFiles/OpenCVCL.dir/proof.cpp.o.d"
+  "CMakeFiles/OpenCVCL.dir/main.cpp.o"
+  "CMakeFiles/OpenCVCL.dir/main.cpp.o.d"
   "OpenCVCL"
   "OpenCVCL.pdb"
 )

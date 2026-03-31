@@ -1,8 +1,8 @@
 [
 {
   "directory": "/home/yagi/Programming/ParallelDevices/Project/build",
-  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++17 -o CMakeFiles/OpenCVCL.dir/proof.cpp.o -c /home/yagi/Programming/ParallelDevices/Project/proof.cpp",
-  "file": "/home/yagi/Programming/ParallelDevices/Project/proof.cpp",
-  "output": "CMakeFiles/OpenCVCL.dir/proof.cpp.o"
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++17 -o CMakeFiles/OpenCVCL.dir/main.cpp.o -c /home/yagi/Programming/ParallelDevices/Project/main.cpp",
+  "file": "/home/yagi/Programming/ParallelDevices/Project/main.cpp",
+  "output": "CMakeFiles/OpenCVCL.dir/main.cpp.o"
 }
 ]

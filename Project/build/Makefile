@@ -129,29 +129,29 @@ OpenCVCL/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/build
 .PHONY : OpenCVCL/fast
 
-proof.o: proof.cpp.o
-.PHONY : proof.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-proof.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/proof.cpp.o
-.PHONY : proof.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-proof.i: proof.cpp.i
-.PHONY : proof.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-proof.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/proof.cpp.i
-.PHONY : proof.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-proof.s: proof.cpp.s
-.PHONY : proof.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-proof.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/proof.cpp.s
-.PHONY : proof.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenCVCL.dir/build.make CMakeFiles/OpenCVCL.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OpenCVCL"
-	@echo "... proof.o"
-	@echo "... proof.i"
-	@echo "... proof.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

@@ -1,13 +1,19 @@
+#include <string>
 #include <chrono>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include <opencv2/core/cvstd.hpp>
-#include <CL/cl2.hpp>
+//#include <opencv2/core/cvstd.hpp>
+#include <CL/opencl.hpp>
+#include <opencv2/core/hal/interface.h>
+#include <opencv2/core/traits.hpp>
 #include <opencv4/opencv2/core.hpp>
 #include <opencv4/opencv2/highgui.hpp>
 #include <opencv4/opencv2/imgcodecs.hpp>
 #include <opencv4/opencv2/imgproc.hpp>
+#include <string>
+
+#pragma OPENCL EXTENSION cl_khr_fp64 : enable
 
 namespace fs = std::filesystem;
 
@@ -23,6 +29,8 @@ using namespace cl;
 
 int divisor(int number, int max);
 void rgb2gray_sequential(const string filename);
+std::vector<string> get_images_from_directory(const string dirname);
+char character_to_grayscale(float grayscale);
 
 /* ========================================
  * ------------OpenCL Functions------------
@@ -33,7 +41,8 @@ cl::Device getDefaultDevice();
 
 void initializeDevice();
 
-void rgb2gray_parallel(const string filename);
+Mat rgb2gray_parallel(const string filename);
+Mat gray2Ascii(Mat grayImage);
 
 /* ========================================
  * ------------OpenCV Functions------------
@@ -58,21 +67,77 @@ cl::Device device;
 
 int main(int argc, const char** argv){
 
-    if(argc != 2)
+    /*if(argc != 2)
     {
         cout << "Please provide the path to an image." << endl;
         return 1;
-    }
+    }*/
 
     initializeDevice();
 
-    rgb2gray_sequential(argv[1]);
+    std::vector<string> files = get_images_from_directory(".");
 
-    rgb2gray_parallel(argv[1]);
+    cv::Animation animation;
+    std::vector<cv::Mat> images;
+
+    for(int i = 0; i < files.size(); i++)
+    {
+        images.push_back(rgb2gray_parallel(files[i]));
+    }
+
+    Mat image = rgb2gray_parallel("BuryArizona.png");
+
+    //Mat asciiImage = gray2Ascii(images[0]);
+    Mat ascii(image.rows, image.cols, CV_8UC4);
+
+    for(int y = 0; y < image.cols; y++)
+    {
+        for(int x = 0; x < image.rows; x++)
+        {
+            ascii.at<char>(x,y) = character_to_grayscale(image.at<char>(x,y));
+        }
+    }
+
+    Mat asciiImage(image.rows, image.cols, CV_8UC3, Scalar(0));
+
+    for(int y = 0; y < asciiImage.cols; y++)
+    {
+        for(int x = 0; x < asciiImage.rows; x++)
+        {
+            string s(1, ascii.at<char>(x,y));
+            putText(asciiImage,
+                    s,
+                    cv::Point(x+10,y+10),
+                    cv::FONT_HERSHEY_SIMPLEX,
+                    0.5,
+                    CV_RGB(118, 185, 55),
+                    1
+            );
+        }
+    }
+
+    //putText(asciiImage, string(1, ascii.at<char>(0,0)), cv::Point(0,10), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(118, 185, 55), 1);
+
+
+    imshow("Ascii", asciiImage);
+    imshow("Image", image);
 
     waitKey(0);
 
     return 0;
+}
+
+char character_to_grayscale(float grayscale) {
+    if (grayscale < 25) return '@';
+    if (grayscale < 50) return '%';
+    if (grayscale < 75) return '#';
+    if (grayscale < 100) return '*';
+    if (grayscale < 125) return '+';
+    if (grayscale < 150) return '=';
+    if (grayscale < 175) return '-';
+    if (grayscale < 200) return ':';
+    if (grayscale < 225) return '.';
+    return ' ';
 }
 
 
@@ -120,18 +185,20 @@ void initializeDevice(){
     cl::Program::Sources sources;
     sources.push_back({ source.c_str(), source.length() + 1 });
 
+    cout << sources[0] << endl;
+
     context = cl::Context(device);
     program = cl::Program(context, sources);
 
     auto err = program.build(device);
     if(err != CL_BUILD_SUCCESS)
     {
-       std::cerr << "ERROR\nBuild Status: " << program.getBuildInfo<CL_PROGRAM_BUILD_STATUS>(device) << "\nBuild Log:\t " << program.getBuildInfo<CL_PROGRAM_BUILD_LOG>(device) << std::endl;
+       std::cerr << "[ERROR] Build Status: " << program.getBuildInfo<CL_PROGRAM_BUILD_STATUS>(device) << "\nBuild Log:\t " << program.getBuildInfo<CL_PROGRAM_BUILD_LOG>(device) << std::endl;
        exit(1);
     }
 }
 
-void rgb2gray_parallel(const string filename){
+Mat rgb2gray_parallel(const string filename){
 
     Mat image = readImage(filename);
 
@@ -195,7 +262,7 @@ void rgb2gray_parallel(const string filename){
     );
     if(err != CL_SUCCESS)
     {
-        cout << "ERROR with enqueueNDRangeKernel\t" << err << endl;
+        cout << "[ERROR] enqueueNDRangeKernel\t" << err << endl;
         exit(1);
     }
 
@@ -214,11 +281,75 @@ void rgb2gray_parallel(const string filename){
 
     cout << "Time taken for operation:\t" << time_taken << " milliseconds" << endl;
 
-    image.convertTo(image, CV_8U);
-    imshow("Image RGB", image);
+    gray.convertTo(gray, CV_8UC4);
 
-    gray.convertTo(gray, CV_8U);
-    imshow("Image Gray", gray);
+    return gray;
+}
+
+Mat gray2Ascii(Mat grayImage)
+{
+    cout << "Starting ascii conversion..." << endl;
+    Mat asciis(grayImage.rows, grayImage.cols, CV_8U);
+
+    size_t floatBuffer_size = grayImage.rows * grayImage.cols * sizeof(float);
+    size_t charBuffer_size = grayImage.rows * grayImage.cols * sizeof(char);
+
+    Buffer grayBuffer(context, CL_MEM_READ_ONLY, floatBuffer_size);
+    Buffer asciiBuffer(context, CL_MEM_WRITE_ONLY, charBuffer_size);
+
+    Kernel kernel(program, "gray2Ascii");
+    kernel.setArg(0, grayBuffer);
+    kernel.setArg(1, asciiBuffer);
+
+    CommandQueue queue(context, QueueProperties::Profiling);
+    queue.enqueueWriteBuffer(
+        grayBuffer,
+        CL_TRUE,
+        0,
+        floatBuffer_size,
+        grayImage.ptr<float>()
+    );
+
+    cout << "Image dimensions: " << grayImage.rows << " x " << grayImage.cols << endl;
+
+    int local_work = (divisor(grayImage.rows*grayImage.cols, kernel.getWorkGroupInfo<CL_KERNEL_WORK_GROUP_SIZE>(device)));
+    cout << "Max work item sizes:\t" << device.getInfo<CL_DEVICE_MAX_WORK_ITEM_SIZES>()[0] << endl;
+    cout << "Max work group size:\t" << device.getInfo<CL_DEVICE_MAX_WORK_GROUP_SIZE>() << endl;
+    cout << "Max individual work group size:\t" << kernel.getWorkGroupInfo<CL_KERNEL_WORK_GROUP_SIZE>(device) << endl;
+    cout << "Local work size chosen:\t" << local_work << endl;
+
+    Event event;
+    auto err = queue.enqueueNDRangeKernel(
+        kernel,
+        NullRange,
+        NDRange((int)(grayImage.rows*grayImage.cols)),
+        //NullRange,
+        NDRange(local_work),
+        nullptr,
+        &event
+    );
+    if(err != CL_SUCCESS)
+    {
+        cout << "[ERROR] enqueueNDRangeKernel\t" << err << endl;
+        exit(1);
+    }
+
+    queue.enqueueReadBuffer(
+        asciiBuffer,
+        CL_TRUE,
+        0,
+        charBuffer_size,
+        asciis.ptr<char>()
+    );
+
+    queue.finish();
+    queue.flush();
+
+    double time_taken = ((double)event.getProfilingInfo<CL_PROFILING_COMMAND_END>() - (double)(event.getProfilingInfo<CL_PROFILING_COMMAND_START>())) / 1000000.0;
+
+    cout << "Time taken for operation:\t" << time_taken << " milliseconds" << endl;
+
+    return asciis;
 }
 
 /* ========================================
@@ -290,4 +421,32 @@ int divisor(int number, int max){
         }
     }
     return i;
+}
+
+std::vector<string> get_images_from_directory(const string dirname)
+{
+    std::vector<string> files;
+
+    fs::path searchDir;
+    if(dirname.empty())
+    {
+        cout << "No directory given.\nPlease provide a directory with the images you'd like to read in" << endl;
+        exit(1);
+    } else {
+        searchDir = dirname;
+    }
+
+    for(const auto &entry : fs::directory_iterator(searchDir))
+    {
+        if(entry.is_regular_file())
+        {
+            if(entry.path().extension() == ".png")
+            {
+                cout << "Reading in:\t" << entry.path().filename() << endl;
+                files.push_back(entry.path().string());
+            }
+        }
+    }
+
+    return files;
 }

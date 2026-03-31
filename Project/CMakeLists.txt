@@ -9,6 +9,6 @@ find_package(OpenCV REQUIRED)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(OpenCVCL proof.cpp)
+add_executable(OpenCVCL main.cpp)
 
 target_link_libraries(${PROJECT_NAME} OpenCL ${OpenCV_LIBS})
