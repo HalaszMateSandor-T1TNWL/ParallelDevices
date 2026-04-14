@@ -3,6 +3,10 @@ OpenCVCL: \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o \
   CMakeFiles/OpenCVCL.dir/main.cpp.o \
+  /usr/local/lib/libSDL2main.a \
+  /usr/local/lib/libSDL2.so \
+  /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so \
+  /usr/lib/x86_64-linux-gnu/libSDL2_image.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libOpenCL.so \
   /usr/local/lib/libopencv_gapi.so.4.14.0 \
   /usr/local/lib/libopencv_highgui.so.4.14.0 \
@@ -225,6 +229,14 @@ OpenCVCL: \
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
 
 CMakeFiles/OpenCVCL.dir/main.cpp.o:
+
+/usr/local/lib/libSDL2main.a:
+
+/usr/local/lib/libSDL2.so:
+
+/usr/lib/x86_64-linux-gnu/libSDL2_ttf.so:
+
+/usr/lib/x86_64-linux-gnu/libSDL2_image.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libOpenCL.so:
 

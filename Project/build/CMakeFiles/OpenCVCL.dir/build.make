@@ -96,6 +96,10 @@ OpenCVCL_EXTERNAL_OBJECTS =
 OpenCVCL: CMakeFiles/OpenCVCL.dir/main.cpp.o
 OpenCVCL: CMakeFiles/OpenCVCL.dir/build.make
 OpenCVCL: CMakeFiles/OpenCVCL.dir/compiler_depend.ts
+OpenCVCL: /usr/local/lib/libSDL2main.a
+OpenCVCL: /usr/local/lib/libSDL2.so
+OpenCVCL: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
+OpenCVCL: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 OpenCVCL: /usr/local/lib/libopencv_gapi.so.4.14.0
 OpenCVCL: /usr/local/lib/libopencv_highgui.so.4.14.0
 OpenCVCL: /usr/local/lib/libopencv_ml.so.4.14.0

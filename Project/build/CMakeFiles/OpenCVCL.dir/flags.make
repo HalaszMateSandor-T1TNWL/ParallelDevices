@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -isystem /usr/local/include/opencv4 -isystem /usr/local/include/SDL2 -isystem /usr/include/SDL2
 
 CXX_FLAGS = -g -std=gnu++17
 

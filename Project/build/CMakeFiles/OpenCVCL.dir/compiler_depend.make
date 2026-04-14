@@ -553,7 +553,11 @@ OpenCVCL: /lib/i386-linux-gnu/libX11.so.6 \
   /usr/lib/i386-linux-gnu/libxcb.so.1 \
   /usr/lib/i386-linux-gnu/libz.so.1 \
   /usr/lib/i386-linux-gnu/libzstd.so.1 \
+  /usr/lib/x86_64-linux-gnu/libSDL2_image.so \
+  /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
+  /usr/local/lib/libSDL2.so \
+  /usr/local/lib/libSDL2main.a \
   /usr/local/lib/libopencv_calib3d.so.4.14.0 \
   /usr/local/lib/libopencv_core.so.4.14.0 \
   /usr/local/lib/libopencv_dnn.so.4.14.0 \
@@ -591,6 +595,10 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/local/lib/libopencv_calib3d.so.4.14.0:
 
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
+
+/usr/lib/x86_64-linux-gnu/libSDL2_ttf.so:
+
+/usr/lib/x86_64-linux-gnu/libSDL2_image.so:
 
 /usr/lib/i386-linux-gnu/libwebpmux.so.3:
 
@@ -867,6 +875,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/c++/15/ostream:
 
 /usr/include/c++/15/bits/basic_string.h:
+
+/usr/local/lib/libSDL2.so:
 
 /usr/include/c++/15/bits/cpp_type_traits.h:
 
@@ -1271,6 +1281,8 @@ CMakeFiles/OpenCVCL.dir/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/local/lib/libSDL2main.a:
 
 /usr/include/wchar.h:
 
